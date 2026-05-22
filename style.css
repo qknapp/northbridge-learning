@@ -25,6 +25,30 @@ body {
     padding: 100px 20px;
 
     text-align: center;
+	
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.35),
+        rgba(120, 180, 255, 0.15),
+        transparent 65%
+    );
+
+    top: -250px;
+    right: -250px;
+
+    pointer-events: none;
+    filter: blur(2px);
 }
 
 .hero-content {
@@ -36,6 +60,33 @@ body {
     font-size: 4rem;
     margin-bottom: 20px;
     font-weight: 700;
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+	z-index: 10;
+    color: white;
+}
+
+.nav-inner {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav-contact {
+    color: white;
+    font-weight: 600;
 }
 
 .subtitle {
@@ -88,6 +139,13 @@ main {
 
     box-shadow:
         0 4px 12px rgba(0,0,0,0.08);
+		
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 .card h2 {
@@ -116,6 +174,15 @@ main {
     text-align: center;
 
     font-weight: 600;
+	
+	transition: 0.2s ease;
+    
+	cursor: default;
+}
+
+.subject-item:hover {
+    background: #e3ebf5;
+    transform: translateY(-2px);
 }
 
 /* RATE */
@@ -155,6 +222,12 @@ a:hover {
 
 .faq-item {
     margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
 }
 
 .faq-item h3 {
