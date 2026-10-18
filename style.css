@@ -328,3 +328,12 @@ a:hover {
 .footer-links a:hover {
     text-decoration: underline;
 }
+
+.promo-banner {
+    background: #ffb703;
+    color: #1e3a5f;
+    text-align: center;
+    font-weight: 600;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+}
